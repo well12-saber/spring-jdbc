@@ -31,7 +31,7 @@ public class DatabaseTaskRepository implements TaskRepository{
     public List<Task> findAll() {
         log.debug("Calling DB findAll");
 
-        String sql = "select * from task";
+        String sql = "select * from task"; 
 
         return jdbcTemplate.query(sql, new TaskRowMapper());
     }
